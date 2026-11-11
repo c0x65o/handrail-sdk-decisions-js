@@ -3,7 +3,7 @@ import { parseNormalizedUsageReceipt, type NormalizedUsageReceipt } from '@handr
 import { createAIRuntimeUsageClient, createAIRuntimeUsageReceiptSink,
   type AIRuntimeUsageOutbox, type AIRuntimeUsageReceiptSink } from '@handrail/ai-assistant/server/usage-control';
 
-export { PostgresAIRuntimeUsageOutbox, PostgresAiPersistence } from '@handrail/ai-assistant/persistence/postgres';
+export { PostgresAIRuntimeUsageOutbox, PostgresAiPersistence, createPostgresSqlClientFromPool } from '@handrail/ai-assistant/persistence/postgres';
 export type { AIRuntimeUsageOutbox, NormalizedUsageReceipt };
 export const DECISIONS_MODEL = 'gpt-6-luna';
 // Separate endpoint identity prevents Responses pricing for the same model.
