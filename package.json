@@ -1,0 +1,13 @@
+{
+  "name": "@handrail/decisions",
+  "version": "0.1.0",
+  "description": "Server-side OpenAI Decisions with durable Handrail telemetry receipts",
+  "type": "module",
+  "license": "UNLICENSED",
+  "engines": { "node": ">=22" },
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "files": ["dist", "README.md"],
+  "scripts": { "build": "tsc -p tsconfig.json", "prepare": "npm run build", "test": "npm run build && node --test test/*.test.mjs" },
+  "dependencies": { "@handrail/ai-assistant": "git+https://github.com/c0x65o/handrail-sdk-ai-assistant-js.git#f9e7eefc00a977e6e4e263130d62099b88f68aeb" },
+  "devDependencies": { "@types/node": "^22.0.0", "typescript": "^5.9.3" }
+}
